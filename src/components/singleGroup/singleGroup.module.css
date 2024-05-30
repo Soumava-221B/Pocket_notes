@@ -59,6 +59,18 @@
   }
 }
 
+.allNotes::-webkit-scrollbar {
+  width: 10px;
+}
+
+.allNotes::-webkit-scrollbar-track {
+  background: rgb(181, 170, 170);
+}
+
+.allNotes::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
 .message_container {
   position: fixed;
   bottom: 0;
@@ -75,6 +87,18 @@
   padding: 1rem;
   padding-right: 2rem;
   position: relative;
+}
+
+.message::-webkit-scrollbar {
+  width: 10px;
+}
+
+.message::-webkit-scrollbar-track {
+  background: rgb(181, 170, 170);
+}
+
+.message::-webkit-scrollbar-thumb {
+  background-color: gray;
 }
 
 .sendIcon {

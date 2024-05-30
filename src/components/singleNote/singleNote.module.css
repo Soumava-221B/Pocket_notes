@@ -22,3 +22,7 @@
   justify-content: flex-end;
 }
 
+.deleteIcon,
+.editIcon {
+  cursor: pointer;
+}

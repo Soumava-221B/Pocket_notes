@@ -48,36 +48,36 @@ export const noteSlice = createSlice({
       });
     },
 
-    // deleteNote: (state, action) => {
-    //   const { noteId, groupId } = action.payload;
+    deleteNote: (state, action) => {
+      const { noteId, groupId } = action.payload;
 
-    //   const group = state.groups.find((g) => g.id === groupId);
+      const group = state.groups.find((g) => g.id === groupId);
 
-    //   const notes = group.notes;
-    //   notes.splice(
-    //     notes.findIndex((note) => note.id === noteId),
-    //     1
-    //   );
-    // },
+      const notes = group.notes;
+      notes.splice(
+        notes.findIndex((note) => note.id === noteId),
+        1
+      );
+    },
 
-    // editNote: (state, action) => {
-    //   const { noteId, groupId, content } = action.payload;
+    editNote: (state, action) => {
+      const { noteId, groupId, content } = action.payload;
 
-    //   const group = state.groups.find((g) => g.id === groupId);
-    //   const note = group.notes.find((note) => note.id === noteId);
-    //   note.content = content;
-    // },
+      const group = state.groups.find((g) => g.id === groupId);
+      const note = group.notes.find((note) => note.id === noteId);
+      note.content = content;
+    },
 
-    // deleteGroup: (state, action) => {
-    //   const { groupId } = action.payload;
+    deleteGroup: (state, action) => {
+      const { groupId } = action.payload;
 
-    //   state.groups.splice(
-    //     state.groups.findIndex((grp) => grp.id === groupId),
-    //     1
-    //   );
+      state.groups.splice(
+        state.groups.findIndex((grp) => grp.id === groupId),
+        1
+      );
 
-    //   state.currentActiveGroup = null;
-    // },
+      state.currentActiveGroup = null;
+    },
   },
 });
 
@@ -85,9 +85,9 @@ export const {
   changeCurrentActiveGroup,
   createGroup,
   createNote,
-  // deleteNote,
-  // editNote,
-  // deleteGroup,
+  deleteNote,
+  editNote,
+  deleteGroup,
 } = noteSlice.actions;
 
 export default noteSlice.reducer;
